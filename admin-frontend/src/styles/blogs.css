@@ -1,0 +1,41 @@
+.blog-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.blog-form input,
+.blog-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.blog-form button {
+    background: #4f46e5;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.blog-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.blog-card button {
+    margin-top: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}

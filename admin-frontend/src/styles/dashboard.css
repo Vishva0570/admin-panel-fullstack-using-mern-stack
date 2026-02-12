@@ -1,0 +1,235 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= LAYOUT ================= */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f8;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 220px;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background: #334155;
+}
+
+/* ================= MAIN ================= */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= TOPBAR ================= */
+.topbar {
+    height: 60px;
+    background: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.topbar h3 {
+    font-size: 18px;
+}
+
+.topbar button {
+    background: #ef4444;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.topbar button:hover {
+    background: #dc2626;
+}
+
+/* ================= CONTENT ================= */
+.content {
+    padding: 20px;
+}
+
+/* ================= ADD USER ================= */
+.add-user {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-user input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.add-user button {
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-user button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* ================= SEARCH ================= */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.search-box button {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-box button:first-of-type {
+    background: #22c55e;
+    color: white;
+}
+
+.search-box button:last-of-type {
+    background: #64748b;
+    color: white;
+}
+
+.search-box button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: #e5e7eb;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background: #f1f5f9;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.action-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #d97706;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.edit-btn:disabled,
+.delete-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* ================= EMPTY STATE ================= */
+tbody tr td[colspan] {
+    padding: 30px;
+    text-align: center;
+    color: #64748b;
+    font-style: italic;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .add-user,
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-user input,
+    .search-input {
+        width: 100%;
+    }
+}
